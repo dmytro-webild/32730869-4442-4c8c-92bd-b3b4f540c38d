@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
 <StyleProvider siteBackground="none" heroBackground="none" buttonVariant="stagger">
         <LoaderReveal
-          imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp"
+          imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp?_wi=1"
           title="Joseph Alexander"
         />
 
@@ -86,7 +86,7 @@ export default function HomePage() {
             quote="I don't design to decorate — I design to solve. Sharp, intentional work that moves brands forward."
             author="Joseph Alexander"
             role="Independent Designer"
-            imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp"
+            imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp?_wi=2"
             socialLinks={[
               { icon: "Twitter", label: "Twitter", href: "#" },
               { icon: "Linkedin", label: "LinkedIn", href: "#" },
@@ -160,7 +160,7 @@ export default function HomePage() {
             },
           ]}
           cta={{
-            imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp",
+            imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp?_wi=3",
             name: "More questions? Reach out anytime.",
             role: "joseph@alexandercreative.com",
             buttonText: "Book a call",
