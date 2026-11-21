@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { StyleProvider } from "@/components/ui/StyleProvider";
 import SiteBackgroundSlot from "@/components/ui/SiteBackgroundSlot";
 import TestimonialTrustCard from "@/components/sections/testimonial/TestimonialTrustCard";
@@ -7,31 +6,17 @@ import AboutTestimonialParallax from "@/components/sections/about/AboutTestimoni
 import FeaturesBentoGridCta from "@/components/sections/features/FeaturesBentoGridCta";
 import FaqTabbedAccordion from "@/components/sections/faq/FaqTabbedAccordion";
 import ContactSplitFormParallax from "@/components/sections/contact/ContactSplitFormParallax";
-import LoaderReveal from "@/components/ui/LoaderReveal";
 import CornerGlowBackground from "@/components/ui/CornerGlowBackground";
 
 export default function HomePage() {
   return (
 <StyleProvider siteBackground="none" heroBackground="none" buttonVariant="stagger">
-        <LoaderReveal
-          imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp?_wi=1"
-          title="Joseph Alexander"
-        />
-
         <SiteBackgroundSlot />
         <CornerGlowBackground position="fixed" />
 
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 4.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          
-        </motion.div>
-
         <HeroWorkScrollStack
           textAnimation="fade"
-          heroAnimationDelay={4}
+          heroAnimationDelay={0}
           tag="1 spot left this month"
           title="Design that"
           titleHighlight="commands attention."
