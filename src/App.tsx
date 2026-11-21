@@ -3,6 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { ReactLenis } from 'lenis/react'
 import { routes } from './routes'
 import Layout from './components/Layout'
+import AdminPage from './pages/AdminPage'
+import EditorPage from './pages/EditorPage'
 
 const pages = import.meta.glob('./pages/*.tsx')
 
@@ -218,12 +220,19 @@ function App() {
         >
           <Routes>
             <Route element={<Layout />}>
-              {routes.map((route) => {
-                const Page = getPageComponent(route.pageFile)
-                if (!Page) return null
-                return <Route key={route.path} path={route.path} element={<Page />} />
-              })}
+              {routes
+                .filter((r) => r.pageFile !== 'AdminPage' && r.pageFile !== 'EditorPage')
+                .map((route) => {
+                  const Page = getPageComponent(route.pageFile)
+                  if (!Page) return null
+                  return <Route key={route.path} path={route.path} element={<Page />} />
+                })}
             </Route>
+
+            {/* Standalone Admin & Editor routes outside public site Layout */}
+            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/editor" element={<EditorPage />} />
+
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>
