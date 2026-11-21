@@ -138,6 +138,7 @@
 html {
   overscroll-behavior: none;
   overscroll-behavior-y: none;
+  overflow-x: hidden;
 }
 
 body {
@@ -149,6 +150,7 @@ body {
   min-height: 100vh;
   overscroll-behavior: none;
   overscroll-behavior-y: none;
+  overflow-x: hidden;
 }
 
 h1,

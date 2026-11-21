@@ -66,7 +66,10 @@ const HeroWorkScrollStack = ({
 
       if (isDesktop) {
         // DESKTOP: Scrub animation tied to scroll position
-        const xOffsets = ["32rem", "14.5rem", "-1.8rem"];
+        const screenW = window.innerWidth;
+        const offset1 = Math.min(screenW * 0.28, 500) + "px";
+        const offset2 = Math.min(screenW * 0.14, 230) + "px";
+        const xOffsets = [offset1, offset2, "-1.8rem"];
         const yAdjustments = [0, -48, 0];
         const rotations = [-5, 0, 5];
         const scales = [1.35, 1.3, 1.25];
@@ -147,11 +150,11 @@ const HeroWorkScrollStack = ({
   return (
     <div ref={animationRef}>
       <div id="hero" data-section="hero">
-        <section aria-label="Hero section" className="relative h-fit md:h-svh pt-30 pb-20 md:py-0 flex items-center overflow-hidden md:overflow-visible">
+        <section aria-label="Hero section" className="relative min-h-svh pt-24 sm:pt-28 pb-16 md:py-24 flex items-center overflow-hidden">
           <HeroBackgroundSlot />
 
           <div className="w-content-width mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 w-full">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-20 w-full">
               <motion.div
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -160,17 +163,17 @@ const HeroWorkScrollStack = ({
               >
                 <div className="card backdrop-blur flex items-center gap-2 px-3 py-1 rounded">
                   <span className="size-2 rounded-full bg-green-500 animate-pulsate [--accent:#22c55e]" />
-                  <p className="text-sm leading-snug font-medium text-foreground">{tag}</p>
+                  <p className="text-xs sm:text-sm leading-snug font-medium text-foreground">{tag}</p>
                 </div>
 
-                <h1 className="text-6xl md:text-7xl 2xl:text-8xl font-medium leading-[1.05] tracking-tight text-center md:text-left">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-medium leading-[1.05] tracking-tight text-center md:text-left">
                   <span className="inline pb-[0.1em] -mb-[0.1em] bg-linear-to-r from-foreground to-primary-cta bg-clip-text text-transparent">
                     {title}{" "}
                     <span className="font-bold">{titleHighlight}</span>
                   </span>
                 </h1>
 
-                <p className="text-base md:text-lg font-medium leading-snug text-center text-balance md:text-left max-w-[95%]">
+                <p className="text-sm sm:text-base md:text-lg font-medium leading-snug text-center text-balance md:text-left max-w-[95%]">
                   {description}{" "}
                   <span className="text-foreground/50">{descriptionMuted}</span>
                 </p>
@@ -226,7 +229,7 @@ const HeroWorkScrollStack = ({
                 variant={textAnimation}
                 gradientText={true}
                 tag="h2"
-                className="md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance"
+                className="md:max-w-8/10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance"
               />
 
               <TextAnimation
@@ -234,7 +237,7 @@ const HeroWorkScrollStack = ({
                 variant={textAnimation}
                 gradientText={false}
                 tag="p"
-                className="md:max-w-7/10 text-lg md:text-xl leading-snug text-center text-balance"
+                className="md:max-w-7/10 text-base sm:text-lg md:text-xl leading-snug text-center text-balance"
               />
             </div>
 

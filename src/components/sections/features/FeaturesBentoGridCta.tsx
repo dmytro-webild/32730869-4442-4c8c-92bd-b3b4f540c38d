@@ -45,7 +45,7 @@ const FeaturesBentoGridCta = ({
             variant={textAnimation}
             gradientText={true}
             tag="h2"
-            className="md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance"
+            className="md:max-w-8/10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance"
           />
 
           <TextAnimation
@@ -53,7 +53,7 @@ const FeaturesBentoGridCta = ({
             variant={textAnimation}
             gradientText={false}
             tag="p"
-            className="md:max-w-7/10 text-lg md:text-xl leading-snug text-center text-balance"
+            className="md:max-w-7/10 text-base sm:text-lg md:text-xl leading-snug text-center text-balance"
           />
 
           {ctaButton && (
@@ -95,7 +95,7 @@ const FeaturesBentoGridCta = ({
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
             {features.map((feature, index) => (
               <div key={feature.title} className={cls(colSpans[index], "flex flex-col gap-3 xl:gap-3.5 2xl:gap-4 p-3 xl:p-3.5 2xl:p-4 card rounded")}>
-                <div className="h-60 xl:h-72 2xl:h-80 rounded overflow-hidden bg-foreground/5 shadow shadow-foreground/5">
+                <div className="h-44 sm:h-56 md:h-64 lg:h-72 2xl:h-80 rounded overflow-hidden bg-foreground/5 shadow shadow-foreground/5">
                   <ImageOrVideo imageSrc={feature.imageSrc} videoSrc={feature.videoSrc} />
                 </div>
                 <div className="flex flex-col gap-1 p-3 xl:p-3.5 2xl:p-4">

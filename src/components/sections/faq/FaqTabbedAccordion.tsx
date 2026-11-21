@@ -47,9 +47,9 @@ const FaqTabbedAccordion = ({
   return (
     <section aria-label="FAQ section" className="py-20">
       <div className="w-content-width mx-auto">
-        <div className="card rounded flex flex-col gap-6 md:gap-10 p-6 md:p-10">
+        <div className="card rounded flex flex-col gap-6 md:gap-10 p-5 sm:p-8 md:p-10">
           <div className="flex flex-col items-center gap-2">
-            <div className="px-3 py-1 mb-1 text-sm card rounded w-fit">
+            <div className="px-3 py-1 mb-1 text-xs sm:text-sm card rounded w-fit">
               <p>{tag}</p>
             </div>
 
@@ -58,7 +58,7 @@ const FaqTabbedAccordion = ({
               variant={textAnimation}
               gradientText={true}
               tag="h2"
-              className="md:max-w-8/10 text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance"
+              className="md:max-w-8/10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance"
             />
 
             <TextAnimation
@@ -66,7 +66,7 @@ const FaqTabbedAccordion = ({
               variant={textAnimation}
               gradientText={false}
               tag="p"
-              className="md:max-w-7/10 text-lg md:text-xl leading-snug text-center text-balance"
+              className="md:max-w-7/10 text-base sm:text-lg md:text-xl leading-snug text-center text-balance"
             />
 
             <SelectorButton
