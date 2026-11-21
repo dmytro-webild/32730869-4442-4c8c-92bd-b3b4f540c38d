@@ -25,7 +25,7 @@ export default function HomePage() {
             description="تصميم وتطوير مواقع وتطبيقات ويب احترافية مخصصة للشركات والعلامات التجارية الطموحة."
             descriptionMuted="في مسار، نجمع بين الإبداع البصري والأداء الفني الفائق لنقدم لك موقعاً متميزاً يجذب العملاء ويحقق أعلى معدلات التحويل."
             primaryButton={{
-              text: "احجز استشارتك المجانية",
+              text: "ابدأ مشروعك الآن",
               href: "#contact",
               avatarSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp",
               avatarLabel: "مسار",
@@ -113,7 +113,7 @@ export default function HomePage() {
             },
           ]}
           ctaButton={{
-            text: "اطلب استشارتك الآن",
+            text: "اطلب موقعك الآن",
             href: "#contact",
             avatarSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp",
             avatarLabel: "مسار",
@@ -141,7 +141,7 @@ export default function HomePage() {
                 },
                 {
                   question: "هل توفر مسار خدمات الاستضافة والدومين؟",
-                  answer: "نقدم استشارات كاملة وندعمك في إعداد الاستضافة، اسم النطاق (الدومين)، وشهادات الأمان SSL لتسليم موقع جاهز للانطلاق.",
+                  answer: "ندعمك في إعداد الاستضافة، اسم النطاق (الدومين)، وشهادات الأمان SSL لتسليم موقع جاهز للانطلاق.",
                 },
                 {
                   question: "هل يمكنني تعديل محتوى الموقع بعد تسليمه؟",
@@ -207,17 +207,14 @@ export default function HomePage() {
           textAnimation="fade"
           tag="تواصل مع مسار"
           title="لنبدأ في تطوير مشروعك القادم"
-          description="تواصل معنا اليوم لمناقشة فكرتك والحصول على عرض سعر واستشارة مجانية من فريق وكالة مسار."
+          description="تواصل معنا اليوم لمناقشة فكرتك والحصول على عرض سعر خاص بمشروعك من فريق وكالة مسار."
           inputs={[
             { name: "name", type: "text", placeholder: "الاسم الكريم", required: true },
             { name: "email", type: "email", placeholder: "البريد الإلكتروني", required: true },
           ]}
           textarea={{ name: "message", placeholder: "أخبرنا عن تفاصيل مشروعك والخدمة المطلوبة...", rows: 5, required: true }}
-          buttonText="إرسال طلب الاستشارة"
+          buttonText="إرسال الطلب"
           imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/contact.webp"
-          ctaLinks={[
-            { icon: "Video", label: "احجز جلسة استشارية", href: "#" },
-          ]}
         />
       </div>
     </StyleProvider>
