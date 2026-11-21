@@ -136,9 +136,9 @@
 }
 
 html {
-  overscroll-behavior: none;
-  overscroll-behavior-y: none;
   overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -148,9 +148,8 @@ body {
   font-family: "Inter Tight", sans-serif;
   position: relative;
   min-height: 100vh;
-  overscroll-behavior: none;
-  overscroll-behavior-y: none;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 h1,
