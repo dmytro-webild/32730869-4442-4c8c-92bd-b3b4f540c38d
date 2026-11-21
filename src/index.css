@@ -95,8 +95,8 @@
   --color-background-accent: var(--background-accent);
 
   /* Fonts */
-  --font-sans: "Inter Tight", sans-serif;
-  --font-tight: "Inter Tight", sans-serif;
+  --font-sans: "Cairo", "Inter Tight", system-ui, sans-serif;
+  --font-tight: "Cairo", "Inter Tight", system-ui, sans-serif;
   --font-mono: monospace;
 
   /* Border Radius */
@@ -140,14 +140,14 @@ html {
   overflow-y: auto;
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   background-color: var(--background);
   color: var(--foreground);
-  font-family: "Inter Tight", sans-serif;
+  font-family: "Cairo", "Inter Tight", system-ui, sans-serif;
   position: relative;
   min-height: 100vh;
+}
   overflow-x: hidden;
   overflow-y: auto;
 }

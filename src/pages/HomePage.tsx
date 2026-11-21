@@ -10,169 +10,216 @@ import CornerGlowBackground from "@/components/ui/CornerGlowBackground";
 
 export default function HomePage() {
   return (
-<StyleProvider siteBackground="none" heroBackground="none" buttonVariant="stagger">
-        <SiteBackgroundSlot />
-        <CornerGlowBackground position="fixed" />
+    <StyleProvider siteBackground="none" heroBackground="none" buttonVariant="stagger">
+      <SiteBackgroundSlot />
+      <CornerGlowBackground position="fixed" />
 
-        <HeroWorkScrollStack
-          textAnimation="fade"
-          heroAnimationDelay={0}
-          tag="1 spot left this month"
-          title="Design that"
-          titleHighlight="commands attention."
-          description="Design engineered for performance, not just aesthetics."
-          descriptionMuted="I craft every visual touchpoint your brand needs to capture attention and convert it into revenue."
-          primaryButton={{
-            text: "Book a call with me",
-            href: "#contact",
-            avatarSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp",
-            avatarLabel: "You",
-          }}
-          sectionTag="Selected Work"
-          sectionTitle="Projects That Speak for Themselves"
-          sectionDescription="A curated selection of design work that drove real business results for ambitious brands."
-          items={[
-            {
-              title: "HydroFlow Product Launch",
-              description: "Beverage brand shoot. Every frame engineered to sell.",
-              imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/screen-1.webp",
-              tag: "Product Shot",
-            },
-            {
-              title: "Webild Athlete Campaign",
-              description: "Sports tech shoot. Wearables captured in raw motion.",
-              imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/screen-2.webp",
-              tag: "Photography",
-            },
-            {
-              title: "Maru Residence",
-              description: "Architectural interior shoot. Minimal compositions.",
-              imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/screen-3.webp",
-              tag: "Interior Design",
-            },
-          ]}
-          secondaryButton={{ text: "View all my projects", href: "#" }}
-        />
-
-        <TestimonialTrustCard
-          textAnimation="fade"
-          quote="Working with Joseph felt like having a seasoned design partner who truly understood our vision for KYMA and brought it to life in ways we hadn't even imagined."
-          rating={5}
-          author="Thomas Weber — Co-founder of KYMA"
-          avatars={[
-            { name: "Thomas Weber", imageSrc: "https://randomuser.me/api/portraits/men/75.jpg" },
-          ]}
-        />
-
-        <div id="about" data-section="about">
-          <AboutTestimonialParallax
+      <div id="hero" data-section="hero">
+        <div id="work" data-section="work">
+          <HeroWorkScrollStack
             textAnimation="fade"
-            tag="About"
-            quote="I don't design to decorate — I design to solve. Sharp, intentional work that moves brands forward."
-            author="Joseph Alexander"
-            role="Independent Designer"
-            imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp?_wi=2"
-            socialLinks={[
-              { icon: "Twitter", label: "Twitter", href: "#" },
-              { icon: "Linkedin", label: "LinkedIn", href: "#" },
-              { icon: "Instagram", label: "Instagram", href: "#" },
-            ]}
-          />
-        </div>
-
-        <div id="services" data-section="services">
-          <FeaturesBentoGridCta
-            textAnimation="fade"
-            tag="Services"
-            title="What I Bring to the Table"
-            description="End-to-end creative services designed to make your brand impossible to ignore — from the first frame to the final pixel."
-            features={[
-              { title: "Photography", description: "Art-directed shoots that capture your brand's personality. Every image is color-graded and built to stop the scroll.", imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/photography.webp" },
-              { title: "Product Design", description: "User-centered interfaces for apps and SaaS products. From wireframe to pixel-perfect UI — intuitive experiences that keep users coming back.", imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/product-design.webp" },
-              { title: "Website", description: "Conversion-focused websites that look sharp and perform. Clean layouts, strategic CTAs, and responsive design that turns traffic into revenue.", imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/website.webp" },
-              { title: "Videos", description: "Brand films and product videos engineered for engagement. Story-driven visuals that convert viewers into customers.", imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/videos.webp" },
-            ]}
-            ctaButton={{
-              text: "Book a call with me",
+            heroAnimationDelay={0}
+            tag="وكالة مسار الرقمية"
+            title="نبني مواقع وتجارب رقمية"
+            titleHighlight="تقود عملك للقمة."
+            description="تصميم وتطوير مواقع وتطبيقات ويب احترافية مخصصة للشركات والعلامات التجارية الطموحة."
+            descriptionMuted="في مسار، نجمع بين الإبداع البصري والأداء الفني الفائق لنقدم لك موقعاً متميزاً يجذب العملاء ويحقق أعلى معدلات التحويل."
+            primaryButton={{
+              text: "احجز استشارتك المجانية",
               href: "#contact",
               avatarSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp",
-              avatarLabel: "You",
+              avatarLabel: "مسار",
             }}
+            sectionTag="نماذج من أعمالنا"
+            sectionTitle="مشاريع رقمية نفخر بإطلاقها"
+            sectionDescription="جولة في أبرز المواقع والمنصات التي طورها فريق مسار لشركات ومؤسسات رائدة."
+            items={[
+              {
+                title: "منصة فاخرة للتجارة الإلكترونية",
+                description: "موقع إلكتروني متكامل للبيع بالتجزئة مع بوابة دفع آمنة وتجربة مستخدم سلسة وعالية السرعة.",
+                imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/screen-1.webp",
+                tag: "متجر إلكتروني",
+              },
+              {
+                title: "موقع مجموعة الأفق الاستثمارية",
+                description: "موقع تعريفي فاخر للشركات يوفر تجربة تصفح تفاعلية وتصميماً يعكس الهوية المؤسسية القوية.",
+                imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/screen-2.webp",
+                tag: "موقع شركات",
+              },
+              {
+                title: "منصة مسار لإدارة الخدمات الرقمية",
+                description: "تطبيق ويب تفاعلي حديث يسهل إدارة المشاريع والتواصل الفعال بين فريق العمل والعملاء.",
+                imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/screen-3.webp",
+                tag: "تطبيق ويب",
+              },
+            ]}
+            secondaryButton={{ text: "استكشف خدمات مسار", href: "#services" }}
           />
         </div>
+      </div>
 
+      <TestimonialTrustCard
+        textAnimation="fade"
+        quote="التعامل مع وكالة مسار كان قراراً فارقاً لمشروعنا. تم تسليم الموقع الإلكتروني باحترافية عالية وبسرعة فائقة تتجاوز كافة التوقعات."
+        rating={5}
+        author="سعود الشمري — المدير التنفيذي لشركة نماء"
+        avatars={[
+          { name: "سعود الشمري", imageSrc: "https://randomuser.me/api/portraits/men/75.jpg" },
+        ]}
+      />
+
+      <div id="about" data-section="about">
+        <AboutTestimonialParallax
+          textAnimation="fade"
+          tag="عن مسار"
+          quote="في مسار، لا نصمم مجرد صفحات ويب، بل نبني بيئة رقمية متكاملة تمنح علامتك التجارية الحضور والتميز الذي تستحقه."
+          author="فريق وكالة مسار"
+          role="حلول تطوير الويب المتكاملة"
+          imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp?_wi=2"
+          socialLinks={[
+            { icon: "Twitter", label: "تويتر", href: "#" },
+            { icon: "Linkedin", label: "لينكد إن", href: "#" },
+            { icon: "Instagram", label: "إنستغرام", href: "#" },
+          ]}
+        />
+      </div>
+
+      <div id="services" data-section="services">
+        <FeaturesBentoGridCta
+          textAnimation="fade"
+          tag="خدمات مسار"
+          title="حلول ويب شاملة لتنمية مشروعك"
+          description="نقدم مجموعة واسعة من خدمات الويب والتصميم المبتكر المصممة خصيصاً لتلبية احتياجات أعمالك والوصول لأهدافك."
+          features={[
+            {
+              title: "تطوير المواقع المخصصة",
+              description: "نصمم ونطور مواقع إلكترونية فريدة متجاوبة كلياً مع الجوال والكمبيوتر، مع الالتزام بأحدث معايير الأمان والسرعة.",
+              imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/website.webp",
+            },
+            {
+              title: "تصميم واجهات وتجربة المستخدم (UI/UX)",
+              description: "نبتكر واجهات تفاعلية جذابة وسلسة تضمن لزوار موقعك تجربة تصفح ممتازة وسهولة الوصول للمعلومات.",
+              imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/product-design.webp",
+            },
+            {
+              title: "تطوير المتاجر الإلكترونية",
+              description: "نبني متاجر إلكترونية احترافية سهلة الإدارة ومزودة بجميع أنظمة الدفع والتسويق لزيادة مبيعاتك وأرباحك.",
+              imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/photography.webp",
+            },
+            {
+              title: "تحسين محركات البحث والأداء (SEO)",
+              description: "نجهّز موقعك ليتصدر نتائج البحث الأولى في جوجل مع تسريع الأداء وتحسين جودة تجربة المستفيد.",
+              imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/videos.webp",
+            },
+          ]}
+          ctaButton={{
+            text: "اطلب استشارتك الآن",
+            href: "#contact",
+            avatarSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp",
+            avatarLabel: "مسار",
+          }}
+        />
+      </div>
+
+      <div id="faq" data-section="faq">
         <FaqTabbedAccordion
           textAnimation="fade"
-          tag="FAQ"
-          title="Frequently Asked Questions"
-          description="Everything you need to know before we start working together."
+          tag="الأسئلة الشائعة"
+          title="كل ما تحتاج معرفته عن خدمات مسار"
+          description="إجابات شاملة لأهم الاستفسارات حول كيفية عملنا وخطوات تطوير موقعك معنا."
           categories={[
             {
-              name: "General",
+              name: "الخدمات والتطوير",
               items: [
-                { question: "What type of clients do you work with?", answer: "I work with ambitious brands, startups, and established businesses that value premium creative work. Whether you're launching a new product or refreshing your brand identity, I bring the same level of craft and attention to detail." },
-                { question: "What's your availability like?", answer: "I typically take on 2–3 projects at a time to ensure each client gets my full attention. Reach out to check my current availability — I'm happy to discuss timelines." },
-                { question: "Do you work remotely or on-site?", answer: "Primarily remote, but I'm open to on-site work for shoots, workshops, or strategy sessions depending on the project scope and location." },
-                { question: "Can I see more examples of your work?", answer: "Absolutely. The projects on this site are a curated selection. I'm happy to share additional case studies relevant to your industry during our initial call." },
+                {
+                  question: "ما هي نوعية المواقع التي تطورها مسار؟",
+                  answer: "نطور كافة أنواع المواقع بدءاً من المواقع التعريفية للشركات والمؤسسات، والمتاجر الإلكترونية، وحتى المنصات وتطبيقات الويب المخصصة.",
+                },
+                {
+                  question: "هل تعمل جميع المواقع على الهواتف والأجهزة اللوحية؟",
+                  answer: "نعم، جميع أعمالنا تتميز بتصميم متجاوب 100% يضمن ظهور الموقع بشكل مثالي وسلس على كافة الشاشات والأجهزة (جوال، أيباد، لابتوب، كمبيوتر).",
+                },
+                {
+                  question: "هل توفر مسار خدمات الاستضافة والدومين؟",
+                  answer: "نقدم استشارات كاملة وندعمك في إعداد الاستضافة، اسم النطاق (الدومين)، وشهادات الأمان SSL لتسليم موقع جاهز للانطلاق.",
+                },
+                {
+                  question: "هل يمكنني تعديل محتوى الموقع بعد تسليمه؟",
+                  answer: "نعم، نوفر لوحة تحكم سهلة الاستخدام ونقوم بتدريب فريقك على إدارة المحتوى والتعديل عليه بكل يسر.",
+                },
               ],
             },
             {
-              name: "Pricing",
+              name: "الأسعار والتكلفة",
               items: [
-                { question: "How do you structure your pricing?", answer: "I offer project-based pricing tailored to scope and deliverables. Every engagement starts with a discovery call so I can provide an accurate, transparent quote — no surprises." },
-                { question: "Do you require a deposit?", answer: "Yes, I require a 50% deposit to secure your spot and begin work. The remaining balance is due upon delivery of final assets." },
-                { question: "Do you offer retainer packages?", answer: "I do. For clients with ongoing creative needs, monthly retainers offer priority access, discounted rates, and faster turnaround times." },
-                { question: "What's included in a typical project quote?", answer: "Quotes include all creative direction, production, editing, and delivery of final files. Revisions are built in — I want you to be thrilled with the result." },
+                {
+                  question: "كيف يتم تحديد تكلفة تطوير الموقع؟",
+                  answer: "تعتمد التكلفة على متطلبات المشروع، عدد الصفحات، والميزات المطلوبة. نقدم عرض سعر شفاف ومفصل بعد مناقشة تفاصيل العمل.",
+                },
+                {
+                  question: "ما هي طريقة الدفع المتبعة؟",
+                  answer: "نتبع نظام الدفع على دفعتين: 50% كدفعة أولى لبدء العمل، و50% عند الاستلام النهائي للمشروع واختباره.",
+                },
+                {
+                  question: "هل توفرون خطط صيانة دورية؟",
+                  answer: "نعم، نوفر باقات صيانة ودعم فني دوري لضمان تحديث الموقع وأمانه واستقراره المستمر.",
+                },
+                {
+                  question: "هل هناك أي مصاريف إضافية غير معلنة؟",
+                  answer: "لا يوجد أي مصاريف خفية، يحدد العرض النهائي كافة التفاصيل والتكاليف بوضوح.",
+                },
               ],
             },
             {
-              name: "Process",
+              name: "مراحل العمل",
               items: [
-                { question: "What does your process look like?", answer: "Discovery call → Creative brief → Concept development → Production → Review & refinement → Final delivery. I keep you in the loop at every stage with clear timelines and checkpoints." },
-                { question: "How long does a typical project take?", answer: "Most projects wrap within 2–4 weeks depending on complexity. Larger campaigns or multi-deliverable projects may extend further, and I'll set expectations upfront." },
-                { question: "How many revisions are included?", answer: "Two rounds of revisions are standard. In practice, my clients rarely need more than one — I invest heavily in understanding your vision before production begins." },
-                { question: "What do you need from me to get started?", answer: "A brief overview of your brand, goals, and any existing assets or references. I'll guide you through the rest during our kickoff call." },
-              ],
-            },
-            {
-              name: "Results",
-              items: [
-                { question: "What kind of results can I expect?", answer: "My work is designed to drive measurable outcomes — higher engagement, increased conversions, and a brand presence that commands attention. I'll share relevant case studies during our call." },
-                { question: "Do you track performance metrics?", answer: "While I focus on the creative, I design everything with performance in mind. I'm happy to collaborate with your marketing team to align on KPIs and measure impact." },
-                { question: "Can you share client testimonials?", answer: "Yes — I have testimonials and references available. Many of my clients see 2–3x improvements in engagement after implementing new creative assets." },
-                { question: "What makes your work different?", answer: "I combine strategic thinking with high-end execution. Every project is approached as a partnership — I'm invested in your success, not just delivering files." },
+                {
+                  question: "ما هي خطوات بناء الموقع في مسار؟",
+                  answer: "1. دراسة الاحتياجات والتخطيط -> 2. تصميم الواجهات UI/UX -> 3. البرمجة والتطوير -> 4. الاختبار والتهيئة -> 5. الإطلاق والتدريب.",
+                },
+                {
+                  question: "كم تستغرق مدة تنفيذ الموقع؟",
+                  answer: "تتراوح مدة التنفيذ عادةً بين 2 إلى 4 أسابيع بناءً على حجم المشروع ومتطلباته الفنية.",
+                },
+                {
+                  question: "هل يمكن تقديم تعديلات على التصميم؟",
+                  answer: "نقدم جولات مراجعة وتعديل محددة في عقد العمل لنضمن وصولنا إلى التصميم المناسب برضاك التام.",
+                },
+                {
+                  question: "كيف أقوم بمتابعة تقدم المشروع؟",
+                  answer: "نزودك برابط معاينة تجريبي مباشر وتحديثات أسبوعية لمتابعة كافة مراحل التطور أولاً بأول.",
+                },
               ],
             },
           ]}
           cta={{
             imageSrc: "https://storage.googleapis.com/webild/default/templates/creative-portfolio/avatar.webp?_wi=3",
-            name: "More questions? Reach out anytime.",
-            role: "joseph@alexandercreative.com",
-            buttonText: "Book a call",
+            name: "لديك استفسار آخر؟ فريق مسار جاهز للإجابة.",
+            role: "info@masar-agency.com",
+            buttonText: "تواصل معنا",
             buttonHref: "#contact",
           }}
         />
+      </div>
 
-        <div id="contact" data-section="contact">
-          <ContactSplitFormParallax
-            textAnimation="fade"
-            tag="Get in Touch"
-            title="Let's Build"
-            description="Have a project in mind? Drop me a message and I'll get back to you within 24 hours."
-            inputs={[
-              { name: "name", type: "text", placeholder: "Your name", required: true },
-              { name: "email", type: "email", placeholder: "Your email", required: true }
-            ]}
-            textarea={{ name: "message", placeholder: "Tell me about your project...", rows: 5, required: true }}
-            buttonText="Send Message"
-            imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/contact.webp"
-            ctaLinks={[
-              { icon: "Video", label: "Book a Call", href: "#" },
-            ]}
-          />
-        </div>
-
-        
-      </StyleProvider>
+      <div id="contact" data-section="contact">
+        <ContactSplitFormParallax
+          textAnimation="fade"
+          tag="تواصل مع مسار"
+          title="لنبدأ في تطوير مشروعك القادم"
+          description="تواصل معنا اليوم لمناقشة فكرتك والحصول على عرض سعر واستشارة مجانية من فريق وكالة مسار."
+          inputs={[
+            { name: "name", type: "text", placeholder: "الاسم الكريم", required: true },
+            { name: "email", type: "email", placeholder: "البريد الإلكتروني", required: true },
+          ]}
+          textarea={{ name: "message", placeholder: "أخبرنا عن تفاصيل مشروعك والخدمة المطلوبة...", rows: 5, required: true }}
+          buttonText="إرسال طلب الاستشارة"
+          imageSrc="https://storage.googleapis.com/webild/default/templates/creative-portfolio/contact.webp"
+          ctaLinks={[
+            { icon: "Video", label: "احجز جلسة استشارية", href: "#" },
+          ]}
+        />
+      </div>
+    </StyleProvider>
   );
 }
