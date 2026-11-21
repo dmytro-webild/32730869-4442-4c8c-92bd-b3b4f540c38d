@@ -19,6 +19,7 @@ export default function Layout() {
           { name: "خدماتنا", href: "#services" },
           { name: "الأسئلة الشائعة", href: "#faq" },
           { name: "تواصل معنا", href: "#contact" },
+          { name: "لوحة التحكم MASAR ADMIN", href: "/admin" },
         ]}
         ctaButton={{ text: "تواصل معنا", href: "#contact" }}
       />
