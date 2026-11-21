@@ -3,16 +3,25 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { ReactLenis } from 'lenis/react'
 import { routes } from './routes'
 import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
 import AdminPage from './pages/AdminPage'
 import EditorPage from './pages/EditorPage'
 
-const pages = import.meta.glob('./pages/*.tsx')
+const pages = import.meta.glob('./pages/**/*.tsx')
 
 function getPageComponent(pageFile: string) {
-  const key = `./pages/${pageFile}.tsx`
-  const loader = pages[key]
-  if (!loader) return null
-  return lazy(loader as () => Promise<{ default: React.ComponentType }>)
+  if (pageFile === 'HomePage') return HomePage
+  const entry = Object.entries(pages).find(([key]) => {
+    const normalized = key.replace(/\\/g, '/')
+    return (
+      normalized === `./pages/${pageFile}.tsx` ||
+      normalized.endsWith(`/pages/${pageFile}.tsx`) ||
+      normalized.endsWith(`/${pageFile}.tsx`) ||
+      normalized.endsWith(`/${pageFile}/index.tsx`)
+    )
+  })
+  if (!entry) return null
+  return lazy(entry[1] as () => Promise<{ default: React.ComponentType }>)
 }
 
 // ─── Render-state probe ────────────────────────────────────────────────────
@@ -118,10 +127,10 @@ if (typeof window !== 'undefined' && window.parent !== window && !window.__webil
   }
 }
 
-class RenderErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
-  state = { hasError: false }
-  static getDerivedStateFromError() {
-    return { hasError: true }
+class RenderErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean; error?: Error }> {
+  state = { hasError: false, error: undefined as Error | undefined }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error }
   }
   componentDidCatch(error: Error, info: ErrorInfo) {
     reportRenderStatus({
@@ -133,7 +142,21 @@ class RenderErrorBoundary extends Component<{ children: ReactNode }, { hasError:
     })
   }
   render() {
-    return this.state.hasError ? null : this.props.children
+    if (this.state.hasError) {
+      return (
+        <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-background text-foreground text-center">
+          <h1 className="text-2xl font-bold mb-2">حدث خطأ أثناء تحميل الصفحة</h1>
+          <p className="text-sm opacity-75 mb-4">{this.state.error?.message || 'حدث خطأ غير متوقع'}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-5 py-2.5 bg-primary-cta text-primary-cta-text rounded-full font-medium cursor-pointer"
+          >
+            إعادة التحميل
+          </button>
+        </div>
+      )
+    }
+    return this.props.children
   }
 }
 
@@ -220,8 +243,9 @@ function App() {
         >
           <Routes>
             <Route element={<Layout />}>
+              <Route path="/" element={<HomePage />} />
               {routes
-                .filter((r) => r.pageFile !== 'AdminPage' && r.pageFile !== 'EditorPage')
+                .filter((r) => r.path !== '/' && r.pageFile !== 'AdminPage' && r.pageFile !== 'EditorPage')
                 .map((route) => {
                   const Page = getPageComponent(route.pageFile)
                   if (!Page) return null

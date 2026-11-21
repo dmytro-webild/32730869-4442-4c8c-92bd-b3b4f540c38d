@@ -17,6 +17,8 @@ const REMOVED_ICON_ALIASES: Record<string, LucideIcon> = {
   Discord: Icons.MessageCircle,
 };
 
+const FallbackIcon: LucideIcon = Icons.HelpCircle || Icons.CircleHelp || (() => null);
+
 const isValidComponent = (value: unknown): boolean =>
   !!value && (typeof value === "function" || (typeof value === "object" && "$$typeof" in value));
 
@@ -26,9 +28,9 @@ export function resolveIcon(icon: IconInput): LucideIcon {
     if (alias) return alias;
     const resolved = (Icons as Record<string, unknown>)[icon];
     if (isValidComponent(resolved)) return resolved as LucideIcon;
-    return Icons.HelpCircle;
+    return FallbackIcon;
   }
-  if (!isValidComponent(icon)) return Icons.HelpCircle;
+  if (!isValidComponent(icon)) return FallbackIcon;
   return icon;
 }
 
