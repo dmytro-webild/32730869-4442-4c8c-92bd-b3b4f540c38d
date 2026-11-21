@@ -34,7 +34,7 @@ const FooterMinimal = ({
 }) => {
   return (
     <footer data-section="footer" aria-label="Site footer" className="relative w-full py-20">
-      <div className="flex flex-col w-content-width mx-auto px-10 pb-5 rounded-lg card">
+      <div className="flex flex-col w-content-width mx-auto px-5 sm:px-8 md:px-10 pb-5 rounded-lg card">
         <AutoFillText className="font-semibold" paddingY="py-5">{brand}</AutoFillText>
 
         <div className="h-px w-full mb-5 bg-foreground/50" />

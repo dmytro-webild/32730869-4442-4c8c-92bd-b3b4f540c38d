@@ -48,14 +48,14 @@ const SelectorButton = ({ options, activeValue, onValueChange, className }: Sele
   }, [activeValue]);
 
   return (
-    <div ref={containerRef} className={cls("relative inline-flex gap-1 p-1 card rounded-full", className)}>
+    <div ref={containerRef} className={cls("relative inline-flex max-w-full overflow-x-auto no-scrollbar gap-1 p-1 card rounded-full", className)}>
       {options.map((option) => (
         <button
           key={option.value}
           data-value={option.value}
           onClick={() => onValueChange(option.value)}
           className={cls(
-            "relative z-1 px-5 py-2 text-sm font-medium rounded-full cursor-pointer transition-colors duration-300",
+            "relative z-1 px-3.5 sm:px-5 py-1.5 sm:py-2 text-xs sm:text-sm font-medium shrink-0 rounded-full cursor-pointer transition-colors duration-300",
             activeValue === option.value ? "text-primary-cta-text" : "text-foreground hover:text-foreground/80"
           )}
         >

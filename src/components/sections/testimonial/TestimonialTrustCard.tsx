@@ -42,10 +42,10 @@ const TestimonialTrustCard = ({
           variant={textAnimation}
           gradientText={false}
           tag="p"
-          className="md:max-w-8/10 text-5xl 2xl:text-6xl leading-[1.15] font-semibold text-center text-balance"
+          className="md:max-w-8/10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl leading-[1.15] font-semibold text-center text-balance"
         />
 
-        <ScrollReveal variant="slide-up" delay={0.1} className="md:max-w-7/10 text-lg md:text-xl leading-snug text-center text-balance">
+        <ScrollReveal variant="slide-up" delay={0.1} className="md:max-w-7/10 text-base sm:text-lg md:text-xl leading-snug text-center text-balance">
           <p>{author}</p>
         </ScrollReveal>
 
@@ -53,7 +53,7 @@ const TestimonialTrustCard = ({
           {visibleAvatars.map((avatar, index) => (
             <div
               key={avatar.name}
-              className={cls("relative size-12 md:size-16 overflow-hidden rounded-full border-2 border-background", index > 0 && "-ml-5")}
+              className={cls("relative size-10 sm:size-12 md:size-16 overflow-hidden rounded-full border-2 border-background", index > 0 && "-ml-3 sm:-ml-5")}
               style={{ zIndex: visibleAvatars.length - index }}
             >
               <ImageOrVideo imageSrc={avatar.imageSrc} videoSrc={avatar.videoSrc} />
@@ -61,10 +61,10 @@ const TestimonialTrustCard = ({
           ))}
           {remainingCount > 0 && (
             <div
-              className="flex items-center justify-center size-12 md:size-16 -ml-5 rounded-full border-2 border-background card"
+              className="flex items-center justify-center size-10 sm:size-12 md:size-16 -ml-3 sm:-ml-5 rounded-full border-2 border-background card"
               style={{ zIndex: 0 }}
             >
-              <span className="text-sm md:text-base font-semibold">+{remainingCount}</span>
+              <span className="text-xs sm:text-sm md:text-base font-semibold">+{remainingCount}</span>
             </div>
           )}
         </ScrollReveal>

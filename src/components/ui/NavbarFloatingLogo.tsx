@@ -40,22 +40,22 @@ const NavbarFloatingLogo = ({ logo, logoImageSrc, navItems, ctaButton }: NavbarF
             animate={{ opacity: 0.15 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-999 bg-foreground"
+            className="fixed inset-0 z-40 bg-foreground"
             onClick={() => setMenuOpen(false)}
           />
         )}
       </AnimatePresence>
 
-      <nav data-section="navbar" className="fixed z-1000 top-5 left-1/2 -translate-x-1/2 w-content-width">
-        <div className="mx-auto w-full md:w-1/2 overflow-hidden rounded backdrop-blur-sm card">
-          <div className="relative z-10 flex items-center justify-between gap-3 xl:gap-4 2xl:gap-5 p-3 xl:p-4 2xl:p-5">
-            <a href="/" className="flex items-center gap-2">
-              <img src={logoImageSrc} alt={logo} className="h-8 w-8 rounded-full object-cover" />
-              <span className="text-xl font-medium text-foreground">{logo}</span>
+      <nav data-section="navbar" className="fixed z-50 top-3 sm:top-5 left-1/2 -translate-x-1/2 w-[calc(100vw-2rem)] max-w-lg md:max-w-xl">
+        <div className="mx-auto w-full overflow-hidden rounded backdrop-blur-sm card">
+          <div className="relative z-10 flex items-center justify-between gap-3 p-3 sm:p-4">
+            <a href="/" className="flex items-center gap-2 min-w-0">
+              <img src={logoImageSrc} alt={logo} className="h-7 w-7 sm:h-8 sm:w-8 rounded-full object-cover shrink-0" />
+              <span className="text-lg sm:text-xl font-medium text-foreground truncate">{logo}</span>
             </a>
 
             <div
-              className="flex items-center justify-center shrink-0 size-9 rounded cursor-pointer primary-button"
+              className="flex items-center justify-center shrink-0 size-8 sm:size-9 rounded cursor-pointer primary-button"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               <Plus

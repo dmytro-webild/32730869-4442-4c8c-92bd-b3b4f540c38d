@@ -117,10 +117,10 @@ const ContactSplitFormParallax = ({
     <section aria-label="Contact section" className="py-20">
       <div className="w-content-width mx-auto">
         <ScrollReveal variant="slide-up" className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div className="p-6 md:p-10 card rounded">
+          <div className="p-5 sm:p-8 md:p-10 card rounded">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="flex flex-col items-center gap-2 text-center">
-                <div className="px-3 py-1 mb-1 text-sm card rounded w-fit">
+                <div className="px-3 py-1 mb-1 text-xs sm:text-sm card rounded w-fit">
                   <p>{tag}</p>
                 </div>
 
@@ -129,7 +129,7 @@ const ContactSplitFormParallax = ({
                   variant={textAnimation}
                   gradientText={true}
                   tag="h2"
-                  className="text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-balance"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-balance"
                 />
 
                 <TextAnimation
@@ -137,7 +137,7 @@ const ContactSplitFormParallax = ({
                   variant={textAnimation}
                   gradientText={false}
                   tag="p"
-                  className="text-lg md:text-xl leading-snug text-balance"
+                  className="text-base sm:text-lg md:text-xl leading-snug text-balance"
                 />
               </div>
 
@@ -182,7 +182,7 @@ const ContactSplitFormParallax = ({
             </form>
           </div>
 
-          <div ref={imageRef} className="relative h-100 md:h-auto card rounded overflow-hidden">
+          <div ref={imageRef} className="relative h-64 sm:h-80 md:h-auto min-h-[280px] sm:min-h-[350px] card rounded overflow-hidden">
             <motion.div style={{ scale: imageScale }} className="w-full h-full origin-center">
               <ImageOrVideo imageSrc={imageSrc} videoSrc={videoSrc} className="md:absolute md:inset-0 size-full object-cover" />
             </motion.div>
